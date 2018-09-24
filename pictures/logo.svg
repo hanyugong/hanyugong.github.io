@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="50px" viewBox="0 0 33 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-99.000000, -132.000000)">
+            <g id="Group-2" transform="translate(98.000000, 133.000000)">
+                <text id="HANYU" font-family="DINCondensed-Bold, DIN Condensed" font-size="16.5" font-weight="bold" fill="#000000">
+                    <tspan x="0.4985" y="48">HANYU</tspan>
+                </text>
+                <path d="M2.5,1 L2.5,31" id="Line-2" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M17.1990741,1 L17.1990741,22" id="Path-51" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M7,13.2013889 L13,13.2013889" id="Line-3" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                <circle id="Oval-19" stroke="#000000" stroke-width="2" stroke-linecap="round" cx="25" cy="13" r="3"></circle>
+                <polyline id="Path-52" stroke="#000000" stroke-width="2" stroke-linecap="round" points="32.7984656 0.951544749 32.7984656 30.9233395 19 30.9233395"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
