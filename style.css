@@ -424,13 +424,13 @@ button,input{
 
 
 .title{
-    font-size:10px;
+    font-size:3em;
     text-align:right;
     margin:0;
     position:fixed;
-    left:1.6em;
+    left:0.6em;
     line-height:1em;
-    top:.8em}
+    top:1.6em}
 
 .title{
     top:1.6em;
@@ -462,15 +462,15 @@ button,input{
 
 [data-text],[data-text]:after{
     position:absolute;
-    right:0;
-    top:0;
+    right:2em;
+    top:0em;
     white-space:nowrap}
 
 .title [data-text],.title [data-text]:after{
     background-color:#efefef;
     overflow:hidden;
     text-overflow:ellipsis;
-    max-width:calc(100vh - 10.5em);
+    max-width:calc(100vh - 8.5em);
     line-height:1.2em}
 
 h1.title.invisible,h2.title,h2.title [data-text]:after{opacity:0;visibility:hidden}
@@ -1031,13 +1031,13 @@ footer .arrow{display:block}
     .title{
         font-size:3em;
         top:1.45em;
-        left:1.5em;}
+        left:0.5em;}
     .title [data-text],.title [data-text]:after{
         color:#000;
         overflow:visible;
         white-space:normal;
         text-overflow:clip;
-        min-width:7.5em;
+        min-width:6.5em;
         line-height:1em}
     .logo.outline [data-text]{width:auto}
     .logo.outline a:hover [data-text]:after{
@@ -1093,10 +1093,15 @@ footer .arrow{display:block}
         top:0.45em}
     .title{
         font-size:3em;
-        top:4em}
+        top:1.45em}
     .logo{left:1.55em}
-    .title{left:1.5em}
-    .title [data-text],.title [data-text]:after{overflow:visible;white-space:normal;text-overflow:clip;min-width:7.5em;line-height:1em}
+    .title{left:.5em}
+    .title [data-text],.title [data-text]:after{
+        overflow:visible;
+        white-space:normal;
+        text-overflow:clip;
+        min-width:6.5em;
+        line-height:1em}
 }
 
 @media only screen and (min-width:48em) and (min-height:45em),only screen and (min-width:60em) and (min-height:34em),only screen and (min-width:100em) and (min-height:29em){
@@ -1117,9 +1122,9 @@ footer .arrow{display:block}
 @media only screen and (min-width:72em) and (min-height:48em){
     main{margin-top:2em}
     .logo{width:60px;font-size:4em;top:0.45em}
-    .title{font-size:2em;top:0.45em}
+    .title{font-size:3em;top:1.45em}
     .logo{left:5.25em}
-    .title{left:1.5em}}
+    .title{left:0.5em}}
 
 @media only screen and (min-width:78em){
     .logo{width:60px;font-size:4em;top:0.45em}
