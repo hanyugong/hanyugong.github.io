@@ -1,4 +1,21 @@
-
+/*
+body::-webkit-scrollbar{
+    width:10px;
+    background-color:#eee
+}
+body::-webkit-scrollbar-track{
+    background-color:#f5f5f5;
+    border-left:1px solid #eee
+}
+body::-webkit-scrollbar-thumb{
+    background-color:#ddd;
+    border-radius:0
+}
+body::-webkit-scrollbar-thumb:active,
+body::-webkit-scrollbar-thumb:hover{
+    background-color:#bbb
+}
+*/
 
 
 button,hr,input{
@@ -97,17 +114,12 @@ summary{display:list-item}
 
 html{
     font:.8em/1.4 "Yoko Mono",Courier,monospace;
-    overflow-x:hidden;
+    overflow-x:scroll;
+    overflow-y: scroll;
     height:auto;
     -moz-osx-font-smoothing:grayscale;
     -webkit-font-smoothing:antialiased;
     font-smoothing:antialiased}
-
-html.landing{
-    overflow:hidden;height:100vh}
-    *,:after,:before{-webkit-box-sizing:border-box;
-        -moz-box-sizing:border-box;box-sizing:border-box}::
-        -moz-selection{background:#bbb;text-shadow:none;color:#fff}::selection{background:#bbb;text-shadow:none;color:#fff}
 
 img,svg,video{vertical-align:middle}
 
@@ -424,20 +436,20 @@ button,input{
 
 
 .title{
-    font-size:3em;
-    text-align:right;
+    font-size:1.5em;
+    text-align:left;
     margin:0;
     position:fixed;
-    left:0.6em;
-    line-height:1em;
-    top:1.6em}
+    line-height:1em;}
 
 .title{
-    top:1.6em;
-    left:.53em;
+    top:8em;
+    left:12.5em;
+/*
     -webkit-transform:rotate(-90deg);
     -ms-transform:rotate(-90deg);
     transform:rotate(-90deg);
+*/
     -webkit-transform-origin:top right;
     -ms-transform-origin:top right;
     transform-origin:top right;
@@ -467,7 +479,8 @@ button,input{
     white-space:nowrap}
 
 .title [data-text],.title [data-text]:after{
-    background-color:#efefef;
+    
+    border-radius: 1em;
     overflow:hidden;
     text-overflow:ellipsis;
     max-width:calc(100vh - 8.5em);
@@ -830,7 +843,8 @@ main{
     position:relative}
 
 .grid li.landscape article{
-    height:100vw}
+    height:100vw;
+ }
 
 .grid li.portrait article{
     height:120vw}
@@ -940,14 +954,12 @@ footer section ul{margin:0}
 .slider footer{padding:0}
 
 h3{font-size:1.8em;margin-top:0}
-/*
 footer form{white-space:nowrap;width:100%}
 footer input{background:0 0;border:1px solid #333;height:2.65em;padding:.65em 1em;vertical-align:top}
 footer input.email{max-width:18em;width:80%}
 footer input.button{margin-left:-1px;cursor:pointer;transition:all .1s ease}
 footer input.button:hover{color:#fff;background-color:#000}
 .address{margin:0}
-*/
 .arrow{position:relative;width:3em;height:3em;margin-top:4em;padding:0;flex:1;margin-right:-.5em}
 footer .arrow{display:block}
 .arrow svg{height:2.8em;fill:none;stroke:#000;stroke-width:1px;position:absolute;top:0;right:.5em}
@@ -958,11 +970,7 @@ footer .arrow{display:block}
     -ms-transform:translateY(0);
     transform:translateY(0)}
 
-::-webkit-scrollbar-track{
-    background-color:#f5f5f5;border-left:1px solid #eee}
-::-webkit-scrollbar{width:8px;background-color:#eee}
-::-webkit-scrollbar-thumb{background-color:#ddd;border-radius:0}
-::-webkit-scrollbar-thumb:active,::-webkit-scrollbar-thumb:hover{background-color:#bbb}
+
 
 
 @media only screen and (min-height:28em) and (max-width:48em){
@@ -1029,15 +1037,15 @@ footer .arrow{display:block}
         top:0.45em;
         left:.5em;}
     .title{
-        font-size:3em;
-        top:1.45em;
-        left:0.5em;}
+        font-size:1.2em;
+        top:12em;
+        left:12.5em;}
     .title [data-text],.title [data-text]:after{
         color:#000;
         overflow:visible;
         white-space:normal;
         text-overflow:clip;
-        min-width:6.5em;
+        min-width:8.5em;
         line-height:1em}
     .logo.outline [data-text]{width:auto}
     .logo.outline a:hover [data-text]:after{
@@ -1057,6 +1065,7 @@ footer .arrow{display:block}
     
     #header{width:28%}main{width:72%}
     
+/*
     .project-header{bottom:4em;left:0;width:28%;height:auto;padding:1em 2em;margin-bottom:2em}
     
     #project-description{
@@ -1064,6 +1073,7 @@ footer .arrow{display:block}
         position:fixed;
         top:0;
         left:28%}
+*/
     
     #links{margin-bottom:.75em}
     
@@ -1092,15 +1102,15 @@ footer .arrow{display:block}
         font-size:4em;
         top:0.45em}
     .title{
-        font-size:3em;
-        top:1.45em}
+        font-size:1.2em;
+        top:12em;
+        left:12.5em;}
     .logo{left:1.55em}
-    .title{left:.5em}
     .title [data-text],.title [data-text]:after{
         overflow:visible;
         white-space:normal;
         text-overflow:clip;
-        min-width:6.5em;
+        min-width:8.5em;
         line-height:1em}
 }
 
@@ -1108,7 +1118,7 @@ footer .arrow{display:block}
     #description{
         font-size:1.5em;
         line-height:1.5em;
-        max-width:20em;
+        max-width:12em;
         display:block;
         margin:.7em 0}}
 
@@ -1117,14 +1127,21 @@ footer .arrow{display:block}
     
     .project-header p{font-size:1.2em}}@media only screen and (min-width:54em){footer .arrow{display:block}}
 
-@media only screen and (min-width:64em){#description span.shorten{display:inline}}@media only screen and (min-width:72em){#error article p,#presentation{font-size:2.5em}ul.grid li{width:33.33%}ul.grid li.landscape article{height:15.2vw}ul.grid li.portrait article{height:calc(30.4vw + 1.9em)}}
+@media only screen and (min-width:64em){#description span.shorten{display:inline}}@media only screen and (min-width:72em){
+    #error article p,#presentation{font-size:2.5em}
+    ul.grid li{width:33.33%}
+    ul.grid li.landscape article{height:15.2vw}
+    ul.grid li.portrait article{height:calc(30.4vw + 1.9em)}}
 
 @media only screen and (min-width:72em) and (min-height:48em){
     main{margin-top:2em}
     .logo{width:60px;font-size:4em;top:0.45em}
-    .title{font-size:3em;top:1.45em}
+    .title{
+        font-size:1.2em;
+        top:12em;
+        left:12.5em;}
     .logo{left:5.25em}
-    .title{left:0.5em}}
+    }
 
 @media only screen and (min-width:78em){
     .logo{width:60px;font-size:4em;top:0.45em}
@@ -1165,6 +1182,8 @@ footer .arrow{display:block}
     #lists:after{display:none}}
 
 @media only screen and (min-width:100em)and (min-height:48em){#hello{font-size:18em;margin-top:.24em}@media only screen and (min-width:110em){#error article p,#presentation{font-size:3.2em}#lists h2{margin-top:.75em}}}
+
+
 
 
 
