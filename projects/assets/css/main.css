@@ -1,7 +1,6 @@
 @import url(font-awesome.min.css);
 
 
-
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -3186,14 +3185,16 @@
 			}
 
 		table td {
-			padding: 0.75em 0.75em;
+            text-align:center;
+			padding: 0em  0em 0em 0em;
+            font-size:0.8em;
 		}
 
 		table th {
-			color: #ffffff;
-			font-size: 1em;
+/*			color: #ffffff;*/
+			font-size: 0.8em;
 			font-weight: bold;
-			padding: 0 0.75em 0.75em 0.75em;
+			padding: 0 0em 0em 0em;
 			text-align: left;
 		}
 
@@ -3240,13 +3241,13 @@
 		.wrapper > .inner {
 			padding: 5em 5em 5em 5em ;
 			max-width: 100%;
-			width: 75em;
+			width: 65em;
 		}
 
 			@media screen and (max-width: 1680px) {
 
 				.wrapper > .inner {
-					padding: 4em 4em 2em 4em ;
+					padding: 4em 4em 2em 8em ;
 				}
 
 			}
@@ -3632,7 +3633,7 @@
 				-webkit-transition: opacity 0.15s ease, -webkit-transform 0.75s ease;
 				-ms-transition: opacity 0.15s ease, -ms-transform 0.75s ease;
 				transition: opacity 0.15s ease, transform 0.75s ease;
-				margin: 1.5em 0 0 0;
+				margin: 0 0 0 0;
 				opacity: 1;
 				padding: 0;
 				position: relative;
@@ -3829,7 +3830,7 @@
 			}
 
 			#sidebar nav a:hover {
-				color: rgba(119, 216, 74, 0.55);
+				color: rgba(0, 0, 0, 0.55);
 			}
 
 			#sidebar nav a.active {
@@ -3956,7 +3957,7 @@
             color:#000;
             text-align:justify;
 /*            width:838px;*/
-            max-width: 56em;
+/*            max-width: 56em;*/
 		}
         #intro article {
             text-align:center;
@@ -4015,7 +4016,7 @@
             color:#000;
             text-align:justify;
 /*            width:838px;*/
-            max-width: 56em;
+/*            max-width: 56em;*/
 		}
 
 /*two*/
@@ -4032,7 +4033,7 @@
             color:#000;
             text-align:justify;
 /*            width:838px;*/
-            max-width: 56em;
+/*            max-width: 56em;*/
 		}
 
 /*three*/
@@ -4049,7 +4050,41 @@
             color:#000;
             text-align:justify;
 /*            width:838px;*/
-            max-width: 56em;
+/*            max-width: 56em;*/
+		}
+
+/*four*/
+	#four {
+
+        background-color:#fff;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 50% 50% fixed;
+	}
+
+		#four p {
+			font-size: 15px;
+            color:#000;
+            text-align:justify;
+/*            width:838px;*/
+/*            max-width: 56em;*/
+		}
+
+/*five*/
+	#five {
+
+        background-color:#fff;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 50% 50% fixed;
+	}
+
+		#five p {
+			font-size: 15px;
+            color:#000;
+            text-align:justify;
+/*            width:838px;*/
+/*            max-width: 56em;*/
 		}
 
 
@@ -4057,6 +4092,21 @@
     max-width: 56em;
     text-align: center;
 }
+
+.container2{
+    max-width: 56em;
+    display:flex;
+    
+}
+
+.container2-left{
+    width: 40em;
+}
+.container2-right{
+    width: 16em;
+}
+
+
         #intro article {
             text-align:center;
 		}
