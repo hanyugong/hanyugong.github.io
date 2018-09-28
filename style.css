@@ -17,6 +17,9 @@ body::-webkit-scrollbar-thumb:hover{
 }
 */
 
+.resume{
+    font-family: 'Julius Sans One', sans-serif;
+}
 
 button,hr,input{
     overflow:visible
@@ -51,6 +54,7 @@ hr{
 
 code,kbd,pre,samp{
     font-family:monospace,monospace;
+    font-family: 'Julius Sans One', sans-serif;
     font-size:1em}
 
 a{background-color:transparent;outline:0;text-decoration:none}
@@ -574,79 +578,12 @@ p.logo [data-text]:before{
     padding:.25em 0;
     transition:color .3s ease}
 
-[data-filter].inactive:after{bottom:.67em}
+[data-filter].inactive:after{bottom:1.1em; }
 [data-filter].inactive:hover:after{bottom:.2em}
 
 
 #description,.project-header p{letter-spacing:.01em}
 
-.project-title{
-    position:relative;
-    margin-top:calc(2em + var(-body-border-width,15px));
-    margin-left:var(--body-border-width,15px);
-    padding:1.5rem 1.5rem;
-    display:flex;
-    flex-flow:column nowrap;
-    justify-content:flex-start;
-    align-items:flex-start;
-    background-color:blueviolet;
-    color:#fff;
-    letter-spacing: 0.05rem;
-}
-.project-header p{
-    font-size:1.5em;
-    margin:0;
-    width:100%;
-    min-width:28%;
-    max-width:38em}
-
-/*project info*/
-/*
-.infoToggle{
-    z-index:200;
-    position:fixed;
-    display:inline-block;
-    padding:.4em 0;
-    -webkit-transform:rotate(-90deg);
-    -ms-transform:rotate(-90deg);
-    transform:rotate(-90deg);
-    bottom:7em;
-    left:1.25em;
-    transition:color .2s ease}
-
-.infoToggle:after,.infoToggle:before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:1px;
-    background-color:#000;
-    left:50%;
-    bottom:.2em;
-    transition:all .3s ease;
-    opacity:0;
-    -webkit-transform:translate(-50%,.2em);
-    -ms-transform:translate(-50%,.2em);
-    transform:translate(-50%,.2em)}
-
-.infoToggle:hover:after,.infoToggle:hover:before{
-    opacity:1;
-    -webkit-transform:translate(-50%,0);
-    -ms-transform:translate(-50%,0);
-    transform:translate(-50%,0)}
-
-.infoToggle.active:after,.infoToggle.active:before{
-    opacity:1;transition:all .3s ease}
-
-.infoToggle.active:after{
-    -webkit-transform:translate(-50%,-.65em) rotate(-45deg);
-    -ms-transform:translate(-50%,-.65em) rotate(-45deg);
-    transform:translate(-50%,-.65em) rotate(-45deg)}
-
-.infoToggle.active:before{
-    -webkit-transform:translate(-50%,-.65em) rotate(45deg);
-    -ms-transform:translate(-50%,-.65em) rotate(45deg);
-    transform:translate(-50%,-.65em) rotate(45deg)}
-*/
 
 .moretext{
     opacity:0;
@@ -674,7 +611,7 @@ p.logo [data-text]:before{
     content:"";
     position:absolute;
     width:100%;
-    height:1px;
+    height:2px;
     background-color:#000;
     left:0;
     bottom:.2em;
@@ -1116,7 +1053,8 @@ footer .arrow{display:block}
 
 @media only screen and (min-width:48em) and (min-height:45em),only screen and (min-width:60em) and (min-height:34em),only screen and (min-width:100em) and (min-height:29em){
     #description{
-        font-size:1.5em;
+        font-family: 'Pragati Narrow', sans-serif;
+        font-size:2em;
         line-height:1.5em;
         max-width:12em;
         display:block;
