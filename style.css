@@ -883,6 +883,7 @@ aside h3{margin:.5em}
 footer{padding:0 .7em 0 1em;display:flex;flex-wrap:wrap;margin-top:2em}
 
 footer section{
+    font-family: 'Nanum Myeongjo', serif; 
     position:relative;
     margin-bottom:2em;
     width:calc(100% - 2em)}
