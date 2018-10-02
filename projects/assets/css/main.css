@@ -3535,6 +3535,40 @@
 
 /* Footer */
 
+.arrow{
+    position:relative;
+    width:9em;
+    height:7em;
+    margin-top:4em;
+    padding:0;
+    flex:1;
+    margin-right:-.5em}
+footer .arrow{display:block}
+.arrow svg{
+    background-color:#fff;
+    height:5em;
+    fill:none;
+    stroke:#000;
+    stroke-width:1px;
+    position:absolute;
+    bottom:0;
+    right:.5em}
+.arrow path{transition:transform .3s ease;-webkit-transform:translateY(.4em);-ms-transform:translateY(.4em);transform:translateY(.4em)}
+
+.arrow:hover path{
+    -webkit-transform:translateY(0);
+    -ms-transform:translateY(0);
+    transform:translateY(0)}
+
+.back-to-top{
+    position:fixed;
+    bottom:0em;
+    right:1em;
+    width:5em;
+    height:10em;
+    z-index: 10001;
+            }
+
 	#sidebar + #wrapper + #footer {
 		margin-left: 18em;
 	}
@@ -3565,19 +3599,20 @@
 		margin: 0 auto;
 	}
 
-/*logo*/
+/*back logo*/
 
-.logo{
-    font-family:monospace;
-    color:#fff;
-    text-align: left;
-   padding:.5em 10em .5em 0em;
-    
-}
+.back{
+    position:fixed;
+    top: 10em;
+    left:2.5em;
+    width:5em;
+    height:10em;
+    z-index: 10001;
+            }
 /* Sidebar */
 
 	#sidebar {
-		padding: .5em 2.5em 3.5em 2.5em ;
+		padding: 2.5em 2.5em 2.5em 2.5em ;
 		background: #fff;
 		cursor:crosshair;
 		height: 100vh;
@@ -3600,6 +3635,7 @@
         top:auto;
     }
 */
+
 
 		#sidebar > .inner {
 			display: -moz-flex;
@@ -3625,8 +3661,9 @@
 			min-height: 100%;
 			opacity: 1;
 			width: 100%;
+            position:relative;
 		}
-            
+
 
 			body.is-ie #sidebar > .inner {
 				height:100%;
@@ -3808,7 +3845,7 @@
 			font-size: 0.6em;
 			font-weight: bold;
 			letter-spacing: 0.25em;
-			line-height: 1.75;
+			line-height: 1;
 			outline: 0;
 			padding:1.35em 0;
 			position: relative;
@@ -3846,8 +3883,7 @@
 			#sidebar nav a:hover {
 				color: rgba(0, 0, 0, 0.55);
 			}
-
-			#sidebar nav a.active {
+		#sidebar nav a.active {
 				color: #404040;
 			}
 
@@ -3868,6 +3904,15 @@
 		}
 
 		@media screen and (max-width: 1280px) {
+            
+   .back{
+    position:fixed;
+    top: 1em;
+    left:2em;
+    width:5em;
+    height:10em;
+    z-index: 10001;
+            }
 
 			#sidebar {
 				height: 3.5em;
@@ -3879,7 +3924,9 @@
 				top: 0;
 				width: 100%;
 			}
-
+            #sidebar > .back{
+                display:none;
+            }
 				#sidebar > .inner {
 					-moz-flex-direction: row;
 					-webkit-flex-direction: row;
@@ -3891,8 +3938,9 @@
 					align-items:stretch;
 					height: inherit;
 					line-height: inherit;
+                    position:relative;
 				}
-            
+          
 
 				#sidebar nav {
 					height: inherit;
@@ -3936,8 +3984,14 @@
 				display: none;
 			}
             
-                  .logo{width:10px;}
-
+ .back{
+    position:fixed;
+    top: 5em;
+    right:5em;
+    width:5em;
+    height:10em;
+    z-index: 10001;
+            }
 
 		}
 
