@@ -17,8 +17,10 @@ body::-webkit-scrollbar-thumb:hover{
 }
 */
 
-.resume{
-    font-family: 'Nanum Myeongjo', serif;
+
+.link{
+    font-family:'Vollkorn', serif;
+    
 }
 
 button,hr,input{
@@ -522,7 +524,7 @@ p.logo [data-text]:before{
     cursor:default;
     opacity:0;
     visibility:hidden;
-    transition:visibility 0s .3s,all .3s ease-in;
+    transition:visibility 0s 1.3s,all 1.3s ease-in;
     -webkit-transform:translateX(-5em);
     -ms-transform:translateX(-5em);
     transform:translateX(-5em)}
@@ -574,11 +576,26 @@ p.logo [data-text]:before{
 #description,#links,main{opacity:1;transition:opacity .6s ease}
 #description,#description span.shorten{display:none}
 [data-filter]{
+     content:"";
+    position:absolute;
+    width:100%;
+    height:1px;
+    left:0;
+    bottom:.1em;
     position:relative;
     padding:.3em 0;
     transition:color .3s ease}
 
-[data-filter].inactive:after{bottom:.8em; }
+[data-filter].inactive:after{
+    bottom:.8em;
+    content:"";
+    position:absolute;
+    width:100%;
+    height:25px;
+    background-color:#fff;
+    opacity: 0.8;
+    left:0;
+    bottom:.1em;}
 [data-filter].inactive:hover:after{bottom:.2em}
 
 
@@ -1005,15 +1022,7 @@ footer .arrow{display:block}
     
     #header{width:28%}main{width:72%}
     
-/*
-    .project-header{bottom:4em;left:0;width:28%;height:auto;padding:1em 2em;margin-bottom:2em}
-    
-    #project-description{
-        padding:2em 1.7em 2em .3em;
-        position:fixed;
-        top:0;
-        left:28%}
-*/
+
     
     #links{margin-bottom:.75em}
     
@@ -1034,7 +1043,10 @@ footer .arrow{display:block}
     ul.grid li.landscape article{height:23vw}
     ul.grid li.portrait article{height:calc(46vw + 1.9em)}
     
-    #links li:nth-of-type(n+2){display:inline}#hello{font-size:14em;line-height:.8em;margin-left:-10px}#hello:after{margin-left:10px}#lists:after{width:7em}
+    #links li:nth-of-type(n+2){display:inline}
+    
+    #hello{
+        font-size:8em;line-height:.8em;margin-left:-10px}#hello:after{margin-left:10px}#lists:after{width:7em}
 /*    footer .arrow{display:none}*/
 }
 
@@ -1059,22 +1071,31 @@ footer .arrow{display:block}
 @media only screen and (min-width:48em) and (min-height:45em),only screen and (min-width:60em) and (min-height:34em),only screen and (min-width:100em) and (min-height:29em){
     #description{
 /*        font-family: 'Vollkorn', serif;*/
-        font-size:1.5em;
-        line-height:1.5em;
-        max-width:15em;
+        background-color: #f2f2f2;
+        padding: 1em;
+        font-size:1.4em;
+        line-height:1.6em;
+        max-width:13em;
         display:block;
         margin:.7em 0}}
 
-@media only screen and (min-width:48em) and (min-height:48em){.site #project-description{padding:2em 1.7em 1.2em 2em;visibility:visible;opacity:1;transition:all .3s ease;position:absolute;left:0;max-width:32em;animation-name:fadeIn;-webkit-animation-name:fadeIn}.infoToggle{display:none}
+@media only screen and (min-width:48em) and (min-height:48em){
+    .site #project-description{
+        padding:2em 1.7em 1.2em 2em;
+        visibility:visible;
+        opacity:1;
+        transition:all .3s ease;
+        position:absolute;left:0;max-width:32em;animation-name:fadeIn;-webkit-animation-name:fadeIn}.infoToggle{display:none}
         
-    
-    .project-header p{font-size:1.2em}}@media only screen and (min-width:54em){footer .arrow{display:block}}
+    .project-header p{font-size:1.2em}}@media only screen and (min-width:54em){footer .arrow{display:block}
+        
+}
 
 @media only screen and (min-width:64em){#description span.shorten{display:inline}}@media only screen and (min-width:72em){
     #error article p,#presentation{font-size:2.5em}
-    ul.grid li{width:33.33%}
-    ul.grid li.landscape article{height:15.2vw}
-    ul.grid li.portrait article{height:calc(30.4vw + 1.9em)}}
+    ul.grid li{width:50%}
+    ul.grid li.landscape article{height:23vw}
+    ul.grid li.portrait article{height:calc(46vw + 1.9em)}}
 
 @media only screen and (min-width:72em) and (min-height:48em){
     main{margin-top:2em}
