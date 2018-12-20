@@ -1712,10 +1712,9 @@
 }
 
     h2{
+        font-family: "Jimi Outline", bold;
         color:#d3d3d3;
         text-align: left;
-        
-    
     }
 
     h3{
@@ -4010,10 +4009,25 @@ footer .arrow{display:block}
 }
 
 .container2-left{
-    width: 40em;
+    width: 35em;
 }
 .container2-right{
-    width: 16em;
+    width: 21em;
+    left:auto;
+}
+
+.container3{
+    max-width: 56em;
+    display:flex;
+    text-align: left;
+    
+}
+
+.container3-left{
+    width: 28em;
+}
+.container3-right{
+    width: 28em;
     left:auto;
 }
 
@@ -4137,11 +4151,29 @@ footer .arrow{display:block}
 			font-size: 15px;
             color:#000;
             text-align:justify;
-/*            width:838px;*/
-/*            max-width: 56em;*/
 		}
 
+	#two p {
+			font-size: 15px;
+            color:#000;
+            text-align:justify;
+		}
 
+    #three p {
+			font-size: 15px;
+            color:#000;
+            text-align:justify;
+		}
+    #four p {
+			font-size: 15px;
+            color:#000;
+            text-align:justify;
+		}
+    #five p {
+			font-size: 15px;
+            color:#000;
+            text-align:justify;
+		}
 
 
         #intro article {
