@@ -34,7 +34,7 @@
         }
         document.write(password());
         </script>
-<!--        <div class="spinner"></div>-->
+
 </head>
 	<body>
         
@@ -77,7 +77,25 @@
                         <p style="text-align: center">If you are not a person who does everything on her own, you must have been familiar with at least one of the following conversations in daily life: <br>
                         "Hey Joey, last night I was completely drunk, who paid for the drinks in the end?" <br> "Errr, so many Davids on the list! Which one is him?" <br> 
                         "Ouch, I once again forgot to charge people for the verizon family plan this month! No wonder I am running out of my monthly budget that fast! " </p><br>
-                        <p> Using Venmo to transfer money has been a common practice. Although unsmooth experiences wouldn't directly drive people away from the product as there are few competitive alternatives so far, <span style="background-color: #dce0e6; font-weight: bold"> maintaing seamless transaction process and help people accomplish small tasks more efficiently are key to continuous growth.</span> Therefore, I redesigned the core pay/request flow for Venmo, aiming to deliver unique and faster service that enable users to finish cash exchange in a second. It is my first time to design for financial services.</p>
+                        <p> Using Venmo to transfer money has been a common practice. Although unsmooth experiences wouldn't directly drive people away from the product as there are few competitive alternatives so far, <span style="background-color: #dce0e6; font-weight: bold"> maintaing seamless transaction process and help people accomplish small tasks more efficiently are key to continuous growth.</span> Therefore, I redesigned the core pay/request flow for Venmo, aiming to deliver unique and faster service that enable users to finish cash exchange in a second.</p><br>
+                            
+                        <div class="container3">
+                             
+                           <div class="container3-left">
+                             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    <img class="image" src="./images/oathchallenge/entry.gif" width=60% style="box-shadow: 0px 5px 15px #D8D8D8;" ><br>
+                           </div>
+                               <div class="container3-right" > <h2 style="font-family: 'Quarto-Bold'; font-size: 1.2em; color: #3d95ce; max-width: 20em;">New Transaction Entry</h2> <br> <p style="max-width: 20em;"> Two intuitive ways to discover the respective quick entries for PAY, REQUEST and SCAN: <br> A. Swipe down as if you 're refreshing the News Feeds; <br> B. Tap on the upper-right button. </div>
+                       </div>
+                            <br><br>
+                        <div class="container3">
+                             
+                           <div class="container3-left">
+                             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img class="image" src="./images/oathchallenge/quick_pay.gif" width=60% style="box-shadow: 0px 5px 15px #D8D8D8;" ><br>
+                           </div>
+                               <div class="container3-right" > <h2 style="font-family: 'Quarto-Bold'; font-size: 1.2em; color: #3d95ce; max-width: 20em;">Faster Process for Routine Activities</h2> <br> <p style="max-width: 20em;"> Improved low which makes on-click payment possible. No repetitive work for periodic payments like rents, utilities and tele plan!</div>
+                       </div>
+                               <br><br>
+              
 						</div>
 					</section>
 
@@ -190,7 +208,17 @@
                         <div class="container">
                             <img class="image" src="./images/oathchallenge/entry.gif" width=30% style="box-shadow: 0px 5px 40px #c2c2c2;"></div><br><br>
                        
-                        <p style = "font-weight: bold;font-size: 1.2em; color:#3d95ce ">Faster, faster and faster!</p>
+                        <p style = "font-weight: bold;font-size: 1.2em; color:#3d95ce ">Easier way to find the person you're looking for</p>
+                        <p> One common complaints I heard from Venmo users, old or new, is that searching people is so hard.There are too many accounts registered with the same name. Though it allows people to enter @username, phone number or email, if the person you are looking for is not your Venmo friend nor in your contact list, you need to take one more step to seek the right one from a sea of similar names.</p><br>
+                         <div class="container">
+                            <img class="image" src="./images/oathchallenge/search.png" width=100% ></div>
+                        <br>
+                         <p> After comparing these three plans against with each other and collecting user feedback, I decided to merge plan A & B:</p><br>
+                          <div class="container">
+                            <img class="image" src="./images/oathchallenge/search.gif" width=30% style="box-shadow: 0px 5px 40px #c2c2c2;"></div><br>
+                        <br>
+                        
+                        <p style = "font-weight: bold;font-size: 1.2em; color:#3d95ce ">Accelerate transaction detail fill-up</p>
                         <p>In addition to distinguishing two major transaction modes, another important step to fasten the process is to let users do less maths. Existing design actually allows users to directly do maths in the $ field, however, users hardly notice the mathematical symbols on the keyboard. Is there a better way?<br><br>In face, <span style="background-color: #dce0e6; font-weight: bold">users' instinct was to input the final result rather than calculating during the process</span>. When it comes to payment, people know how much they should pay to another person individually. When people need to charge others, what they usually know is the total amount. So, how about letting the system do the math automatically? I came up two alternatives based on this user insight.    </p><br>
                         <div class="container">
                             <img class="image" src="./images/oathchallenge/payment_A.png" width=100% ></div><br>
@@ -199,10 +227,24 @@
 						              <br>
                         
                         <p><span style="font-weight: bold">Decision:</span> Shortly after I made the prototype, I questioned myself: <span style="background-color: #dce0e6; font-weight: bold">do people actually need to switch mode during the process? </span>Their intention should be very clear at the very beginning. Such assumptions then got confirmed by other users. If I don't need to consider half-way mode switch, plan A obviously does better in terms of mode identification.  </p><br>
+                        <p>However, the "toal" and "each" input field confused users. My intention was to let users flexibly enter either "respective amount" or "total amount" and the system would do the math. However, what if some people involved in the payment already paid you offline? User would still need to deduct that portion from the total amount. To make thing simpler, I iterated the design as follows: </p><br>
+                        <div class="container">
+                            <img class="image" src="./images/oathchallenge/payment_iteration1.png" width=100% ></div><br>
                         
-                        <p> Wait, what if the user has periodic payments (as mentioned in the user scenario analysis)?<span style="background-color: #dce0e6; font-weight: bold"> It would be trivial for them to fill out the detailed payment page again and again every time. </span>Same with the request, is there any way to save both the sender and recipient's effort?Here comes my solution:  </p> <br>
-                         <div class="container">
-                            <img class="image" src="./images/oathchallenge/payment_iteration.png" width=100% ></div>
+                        <p> Wait, what if the user has periodic payments (as mentioned in the user scenario analysis)?<span style="background-color: #dce0e6; font-weight: bold"> It would be trivial for them to fill out the detailed payment page again and again every time. </span>Same with the request, is there any way to save both the sender and recipient's effort? Here comes my solution:  </p> <br>
+                        <div class="container">
+                            <img class="image" src="./images/oathchallenge/payment_iteration.png" width=100% ></div><br>
+                        
+                        <p>My initial thoughts about the "quick pay" entry was that it shouldn't be a frequent practice, hence I bury it in the same way I did on the home page. After a quick test, I realized that the context was different: home page looks like Facebook news feeds, and users would naturally swipe down to refresh the feeds so they could discover the entries easily. However, when it comes to payment detail page, users have the mindset that refreshing action would clear everything they've already entered. As a result, they would intentionally avoid "swiping down" gesture.  In the end, I decided to move quick pay entry to the upper-right part of the header.</p><br> 
+                        <div class="container3">
+                             
+                           <div class="container3-left">
+                                 &nbsp &nbsp &nbsp &nbsp<img class="image" src="./images/oathchallenge/quick_pay.gif" width=80% style="box-shadow: 0px 5px 15px #D8D8D8; text-align: center" ><br>
+                           </div>
+                               <div class="container3-right" >
+                                   &nbsp &nbsp &nbsp &nbsp<img class="image" src="./images/oathchallenge/quick_collect.gif" width=80% style="box-shadow: 0px 5px 15px #D8D8D8; text-align: center" ><br><br>  </div>
+                       </div>
+                    
                         <br>
                         
                         </div>
