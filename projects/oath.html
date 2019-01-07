@@ -16,14 +16,24 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!-- loader -->
-    <SCRIPT LANGUAGE="JavaScript">  
-        var password = ''
-        password=prompt('Please enter the password:','');
-        if (password != null) {
-        location.href= password + ".html";
+    <script language = JavaScript>
+        function password() {
+            var testV = 1;
+            var pass1 = prompt('Please enter the password', '');
+            while (testV < 3) {
+                if (!pass1) history.go(-1);
+                if (pass1 == "oath_challenge") {
+                    alert('Welcome!');
+                    break;
+                }
+                testV += -1;
+                var pass1 = prompt('Please enter the correct password');
+            }
+            if (pass1 != "password" & testV == 3) history.go(-1);
+            return " ";
         }
-
-        </SCRIPT>
+        document.write(password());
+        </script>
 <!--        <div class="spinner"></div>-->
 </head>
 	<body>
