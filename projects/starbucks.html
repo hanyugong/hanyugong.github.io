@@ -16,13 +16,18 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     
-        <!-- loader -->
-        	
-<!--        <div class="spinner"></div>-->
-    
     
 </head>
 	<body>
+        <!-- Preload -->
+		<div id="preload">
+			<div class="kd-bounce">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<!-- Preload -->
+        <div class="outer" style="display: none;">
 		<!-- Sidebar -->
            <div class="back">
                     <a href="../index.html">
@@ -320,15 +325,29 @@
             <div class="inner">
                
                     <h3>......Explore more projects......</h3><br>
-                   <nav class="more" width="838px" style="text-align: center;">
-                    <ul>
-                        <a href="./frog.html">
-                           <li ><img src="../pictures/frog.png" width="30%"></li></a>
-                        <a href="./challenge.html">
-                        <li ><img src="../pictures/challenge_hover.png" width="30%" ></li></a>
-                        <a href="./Tezign.html">
-                        <li ><img src="../pictures/tezign_small.png" width="30%" ></li></a>
-                </ul></nav>
+                   <div class="navigation" style="float:left;" >
+                            <a href="./frog.html">
+                             <span class="shift" >
+                                &laquo;</span>
+                                <span class="hide">frog</span>
+                                <span class="before">Previous &nbsp;</span>
+                                
+                                
+                            </a>
+                            <div class="mask"></div>
+                        </div>
+                        
+                         <div class="navigation" style="float:right;" >
+                            <a href="./Tezign.html">
+                                <span class="hide">Tezign</span>
+                                <span class="before">Next&nbsp;</span>
+                                <span class="shift" >
+                                &raquo;</span>
+                                
+                            </a>
+                            <div class="mask"></div>
+                        </div>
+                <br><br>
                
                 </div>
                 </section>
@@ -358,6 +377,7 @@
 					</ul>
 				</div>
 			</footer>
+            </div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -367,6 +387,12 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+        <script>
+        $(window).load(function(){
+             $('.loader').fadeOut();
+            $(".outer").css("display", "block");
+        });
+    </script>
 
 	</body>
 </html>
