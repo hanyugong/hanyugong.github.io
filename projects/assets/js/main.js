@@ -200,7 +200,17 @@
 
 						}
 					});
+        
+        //preload
+        var $preload = $('#preload');
+
+		if ($preload.length) {
+			$(window).on('load', function () {
+				$preload.fadeOut(400);
+			});
+		}
 
 	});
 
 })(jQuery);
+
