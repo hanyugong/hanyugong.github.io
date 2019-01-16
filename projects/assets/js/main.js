@@ -179,6 +179,16 @@
 						$img.hide();
 
 				});
+        
+             
+    //preload
+        var $preload = $('.preload');
+
+		if ($preload.length) {
+			$(window).on('load', function () {
+				$preload.fadeOut(600);
+			});
+		}
 
 		// Features.
 			if (skel.canUse('transition'))
@@ -200,17 +210,7 @@
 
 						}
 					});
-        
-        //preload
-        var $preload = $('#preload');
-
-		if ($preload.length) {
-			$(window).on('load', function () {
-				$preload.fadeOut(400);
-			});
-		}
-
+       
 	});
 
 })(jQuery);
-
