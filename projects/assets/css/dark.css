@@ -1914,14 +1914,14 @@
 }
 
 .preload .rubik-loader {
-  width: 64px;
-  height: 64px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url(http://i.giphy.com/3og0ISeflb7vrNzy2A.gif);
+  background-image: url(../loader.gif);
   background-repeat: no-repeat;
   background-position: center;
 }
