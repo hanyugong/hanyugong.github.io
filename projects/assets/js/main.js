@@ -10,11 +10,20 @@
 		xsmall:	'(max-width: 480px)'
 	});
 
-	$(function() {
+	$(document).ready(function() {
 
 		var	$window = $(window),
 			$body = $('body'),
 			$sidebar = $('#sidebar');
+        
+        //preload
+        var $preload = $('.preload');
+
+		if ($preload.length) {
+			$(window).on('load', function () {
+				$preload.fadeOut(2000);
+			});
+		}
 
 		// Hack: Enable IE flexbox workarounds.
 			if (skel.vars.IEVersion < 12)
@@ -181,14 +190,7 @@
 				});
         
              
-    //preload
-        var $preload = $('.preload');
-
-		if ($preload.length) {
-			$(window).on('load', function () {
-				$preload.fadeOut(600);
-			});
-		}
+    
 
 		// Features.
 			if (skel.canUse('transition'))
