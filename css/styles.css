@@ -1086,39 +1086,20 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-#preload .kd-bounce {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  margin: 40px auto;
-	
-}
-#preload .kd-bounce:before,
-#preload .kd-bounce:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #242424;
-  opacity: 0.4;
+
+#preload .rubik-loader {
+  width: 64px;
+  height: 64px;
   position: absolute;
-  top: 0;
-  left: 0;
-  animation: kd-bounce 2.4s infinite ease-in-out;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url(http://i.giphy.com/3og0ISeflb7vrNzy2A.gif);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#preload .kd-bounce:after {
-  animation-delay: -1.2s;
-}
-@keyframes kd-bounce {
-  0%,
-  100% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
-  }
-}
+
 /* ===========  9. Responsive  =========== */
 @media screen and (max-width: 991px) {
   .preload {
