@@ -21,7 +21,7 @@
 
 		if ($preload.length) {
 			$(window).on('load', function () {
-				$preload.fadeOut(2000);
+				$preload.fadeOut(1000);
 			});
 		}
 
