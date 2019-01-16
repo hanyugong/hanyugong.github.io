@@ -3428,13 +3428,14 @@
 
 /* Footer */
 .navigation {
-    width: 30%;
+    width: 3em;
+    height: 3em;
 	border: 2px solid #fff;
-    border-radius: 50px;
+    border-radius: 50%;
 	cursor: pointer;
 	letter-spacing: 0.2125rem;
 	overflow: hidden;
-	padding: 20px 30px;
+	padding: .5em 1em;
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
@@ -3445,11 +3446,11 @@
 	user-select: none;
 }
 
-.navigation a {
+.navigation .shift {
 	color: #fff;
     font-family: 'Roboto';
     overflow: hidden;
-    font-size:0.8em;
+    font-size:1em;
 	text-decoration: none;
 }
 
@@ -3459,13 +3460,10 @@
 	height: 100px;
 	position: absolute;
 	transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 1.1s cubic-bezier(0.19, 0, 0.22, 0);
 	width: 200px;
 }
 
-.navigation .hide{
-    display:none;
-}
 .navigation .shift {
 	display: inline-block;
 	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -3473,18 +3471,16 @@
 
 .navigation:hover {
 	background-color: rgba(255, 255, 255, 1);
-    padding-top:22px;
+    padding-left:.5em;
 	border-color: #fff;
 	box-shadow: 0 0 5px rgba(0,0,0 0.8);
 	transition: background 0s;
 }
 
-.navigation:hover a {
+.navigation:hover .shift {
 	color: #000;
 }
-.navigation:hover .hide {
-	display:contents
-}
+
 .navigation:hover .before {
 	display:none
 }
