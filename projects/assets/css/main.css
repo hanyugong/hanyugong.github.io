@@ -530,7 +530,7 @@
 
 	}
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 1200px) {
 
 		.row > * {
 			padding: 0 0 0 1.5em;
@@ -1656,7 +1656,7 @@
 
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1200px) {
 
 			body, input, select, textarea {
 				font-size: 12pt;
@@ -2068,7 +2068,7 @@
 /* ===========  8. Preload  =========== */
 
 
-#preload {
+.preload {
   top: 0;
   left: 0;
   bottom: 0;
@@ -2084,15 +2084,15 @@
   justify-content: center;
   overflow: hidden;
 }
-#preload .kd-bounce {
+.preload .kd-bounce {
   width: 40px;
   height: 40px;
   position: relative;
   margin: 40px auto;
 	
 }
-#preload .kd-bounce:before,
-#preload .kd-bounce:after {
+.preload .kd-bounce:before,
+.preload .kd-bounce:after {
   content: '';
   display: block;
   width: 100%;
@@ -2105,7 +2105,7 @@
   left: 0;
   animation: kd-bounce 2.4s infinite ease-in-out;
 }
-#preload .kd-bounce:after {
+.preload .kd-bounce:after {
   animation-delay: -1.2s;
 }
 @keyframes kd-bounce {
@@ -2732,7 +2732,7 @@
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 2em 0 2em 0;
 		padding-left: 1em;
 	}
 
@@ -3381,7 +3381,7 @@
 				height: 100vh;
 			}
 
-			@media screen and (max-width: 1280px) {
+			@media screen and (max-width: 1200px) {
 
 				.wrapper.fullscreen {
 					min-height: calc(100vh - 2.5em);
@@ -3563,7 +3563,7 @@
 		margin-left: 18em;
 	}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1200px) {
 
 			#sidebar + #wrapper {
 				margin-left: 0;
@@ -3708,7 +3708,7 @@ footer .arrow{display:block}
 		margin-left: 18em;
 	}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1200px) {
 
 			#sidebar + #wrapper + #footer {
 				margin-left: 0;
@@ -3741,7 +3741,7 @@ footer .arrow{display:block}
     top: 10em;
     left:2.5em;
     width:5em;
-    height:10em;
+    height:100vh;
     z-index: 10001;
             }
 /* Sidebar */
@@ -4038,7 +4038,7 @@ footer .arrow{display:block}
 			opacity: 0;
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1200px) {
             
    .back{
     position:fixed;
@@ -4121,7 +4121,7 @@ footer .arrow{display:block}
             
  .back{
     position:fixed;
-    top: 5em;
+    top: 1em;
     right:5em;
     width:5em;
     height:10em;
@@ -4256,7 +4256,7 @@ footer .arrow{display:block}
 }
 			}
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
 
 			#intro {
 				background-attachment: scroll;
@@ -4347,7 +4347,7 @@ footer .arrow{display:block}
 
 			}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 1200px) {
 
 			#intro {
 				background-attachment: scroll;

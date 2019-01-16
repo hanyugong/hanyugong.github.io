@@ -1896,7 +1896,7 @@
 /* ===========  8. Preload  =========== */
 
 
-#preload {
+.preload {
   top: 0;
   left: 0;
   bottom: 0;
@@ -1912,15 +1912,15 @@
   justify-content: center;
   overflow: hidden;
 }
-#preload .kd-bounce {
+.preload .kd-bounce {
   width: 40px;
   height: 40px;
   position: relative;
   margin: 40px auto;
 	
 }
-#preload .kd-bounce:before,
-#preload .kd-bounce:after {
+.preload .kd-bounce:before,
+.preload .kd-bounce:after {
   content: '';
   display: block;
   width: 100%;
@@ -1933,7 +1933,7 @@
   left: 0;
   animation: kd-bounce 2.4s infinite ease-in-out;
 }
-#preload .kd-bounce:after {
+.preload .kd-bounce:after {
   animation-delay: -1.2s;
 }
 @keyframes kd-bounce {
