@@ -15,10 +15,24 @@
 		<link rel="stylesheet" href="./assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    
-        <!-- loader -->
-        	
-<!--        <div class="spinner"></div>-->
+    <script language = JavaScript>
+        function password() {
+            var testV = 1;
+            var pass1 = prompt('Password is required to view this project :)', '');
+            while (testV < 3) {
+                if (!pass1) history.go(-1);
+                if (pass1 == "hanyu") {
+                    alert('Welcome!');
+                    break;
+                }
+                testV += -1;
+                var pass1 = prompt('Please enter the correct password');
+            }
+            if (pass1 != "password" & testV == 3) history.go(-1);
+            return " ";
+        }
+        document.write(password());
+        </script>
 </head>
 	<body>
 
