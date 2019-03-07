@@ -705,6 +705,30 @@ body {
 .project-item:last-child {
   margin-bottom: 0;
 }
+
+.project-item .strapline{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 200px;
+  z-index: 999;
+}
+
+.project-item .strapline a{
+  color: #000000;
+  font-family:'Roboto Mono', monospace; 
+  font-size: 11px;
+  display: inline-block;
+  line-height: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 1;
+  letter-spacing: 1px;
+}
+
+.project-item:hover .strapline{
+    display: none;
+}
 .project-item .title {
   position: absolute;
   top: 20px;
@@ -715,6 +739,7 @@ body {
 .project-item .title a {
   background-color: #000000;
   color: #ffffff;
+  font-family:'Roboto Mono', monospace; 
   font-size: 12px;
   display: inline-block;
   line-height: 24px;
@@ -1096,6 +1121,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-image: url(../pictures/loader.gif);
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
