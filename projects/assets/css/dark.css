@@ -11,6 +11,9 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
+    p{
+        font-family: 'Crimson Text', serif;
+        }
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -3057,8 +3060,9 @@
 	}
 
 	table {
-		margin: 0 0 2em 0;
-		width: 100%;
+        font-family: 'Crimson Text', serif;
+		margin: 2em 5em 2em 3em;
+		width: 50em;
 	}
 
 		table tbody tr {
@@ -3072,9 +3076,10 @@
 			}
 
 		table td {
-            text-align:center;
-			padding: 0em  0em 0em 0em;
+            text-align:left;
+			padding: 0em  0em 0em 2em;
             font-size:0.8em;
+            max-width: 8em;
 		}
 
 		table th {
@@ -3082,7 +3087,7 @@
 			font-size: 0.8em;
 			font-weight: bold;
 			padding: 0 0em 0em 0em;
-			text-align: left;
+			text-align: right;
 		}
 
 		table thead {
@@ -3128,13 +3133,13 @@
 		.wrapper > .inner {
 			padding: 5em 5em 5em 5em ;
 			max-width: 100%;
-			width: 65em;
+			width: 80em;
 		}
 
 			@media screen and (max-width: 1680px) {
 
 				.wrapper > .inner {
-					padding: 4em 4em 2em 8em ;
+					padding: 4em 4em 4em 4em ;
 				}
 
 			}
@@ -3968,23 +3973,24 @@ footer .arrow{display:block}
 
 
 .container{
-    max-width: 56em;
-    text-align: center;
+    max-width: 60em;
+    text-align:center;
+    margin:auto;
 }
 
 .container2{
-    max-width: 56em;
+    max-width: 60em;
     display:flex;
     text-align: left;
-    
+    margin:auto;
 }
 
 .container2-left{
-    width: 28em;
+    width: 30em;
     text-align: center;
 }
 .container2-right{
-    width: 28em;
+    width: 30em;
    text-align: center;
 }
 
@@ -4024,30 +4030,14 @@ footer .arrow{display:block}
             text-align:center;
 		}
 
-        #intro table th{
-/*            color:#000;*/
-            letter-spacing:inherit;
-            margin:0 0 0 0;
-            padding: .5em 0em 0em 0em;
-        }
-        #intro table td{
-/*            color:#000;*/
-            text-align:left;
-            padding: .5em 0em 0em 0em;
-        }
+
 
 @media screen and (max-width: 980px) {
 
 				#intro p br {
 					display: none;
 				}
-    
-    .container2{
-    max-width: 56em;
-    display:flex wrap;
-    text-align: left;
-    
-}
+
     
 			}
 
@@ -4059,13 +4049,7 @@ footer .arrow{display:block}
                 #intro article{
                     resize:both;
                 }
-    
-        .container2{
-    max-width: 56em;
-    display:wrap;flex-wrap: nowrap;
-    text-align: left;
-    
-}
+
 
 			}
 
@@ -4074,12 +4058,7 @@ footer .arrow{display:block}
 			#intro {
 				background-attachment: scroll;
 			}
-    .container2{
-    max-width: 56em;
-    display:flex;
-    text-align: left;
-    
-}
+
     
 		}
 
@@ -4175,17 +4154,6 @@ footer .arrow{display:block}
             text-align:center;
 		}
 
-        #intro table th{
-            color:#000;
-            letter-spacing:inherit;
-            margin:0 0 0 0;
-            padding: .5em 0em 0em 0em;
-        }
-        #intro table td{
-            color:#000;
-            text-align:left;
-            padding: .5em 0em 0em 0em;
-        }
 
 			@media screen and (max-width: 980px) {
 

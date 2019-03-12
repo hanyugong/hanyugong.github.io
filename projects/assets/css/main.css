@@ -13,6 +13,9 @@
 		vertical-align: baseline;
 	}
 
+p{
+font-family: 'Crimson Text', serif;
+}
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -1712,7 +1715,7 @@
 }
 
     h2{
-        font-family: "Jimi Outline", bold;
+        font-family: 'Crimson Text', serif;
         color:#d3d3d3;
         text-align: left;
     }
@@ -2093,7 +2096,7 @@
           transform: translate(-50%, -50%);
     
   background-image: url(../loader.gif);
-    background-size: 50%;
+  background-size: 15em;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -3216,8 +3219,9 @@
 	}
 
 	table {
-		margin: 0 0 2em 0;
-		width: 100%;
+        font-family: 'Crimson Text', serif;
+		margin: 2em 5em 2em 5em;
+		width: 50em;
 	}
 
 		table tbody tr {
@@ -3231,17 +3235,19 @@
 			}
 
 		table td {
-            text-align:center;
-			padding: 0em  0em 0em 0em;
+            color: #000;
+            text-align:left;
+			padding: 0em 0em 0em 2em;
             font-size:0.8em;
+            max-width: 8em;
 		}
 
 		table th {
 /*			color: #ffffff;*/
 			font-size: 0.8em;
-			font-weight: bold;
 			padding: 0 0em 0em 0em;
-			text-align: left;
+			text-align: right;
+            max-width: 10em;
 		}
 
 		table thead {
@@ -3287,13 +3293,13 @@
 		.wrapper > .inner {
 			padding: 5em 5em 5em 5em ;
 			max-width: 100%;
-			width: 65em;
+			width: 80em;
 		}
 
 			@media screen and (max-width: 1680px) {
 
 				.wrapper > .inner {
-					padding: 4em 4em 2em 8em ;
+					padding: 4em 4em 4em 4em ;
 				}
 
 			}
@@ -3535,6 +3541,21 @@
 							height: 6em;
 							line-height: 6em;
 						}
+            table td {
+            color: #000;
+            text-align:left;
+			padding: 0em 0em 0em 2em;
+            font-size:0.8em;
+            max-width: 8em;
+		}
+
+		table th {
+/*			color: #ffffff;*/
+			font-size: 0.8em;
+			padding: 0 0em 0em 0em;
+			text-align: right;
+            max-width: 0.5em;
+		}
 
 		}
 
@@ -4109,39 +4130,44 @@ footer .arrow{display:block}
 
 
 .container{
-    max-width: 56em;
-    text-align: center;
+    max-width: 60em;
+    text-align:center;
+    margin:auto;
 }
 
 
 .container2{
-    max-width: 56em;
+    max-width: 60em;
     display:flex;
     text-align: left;
+    margin:auto;
     
 }
 
 .container2-left{
     width: 40em;
+
 }
 .container2-right{
-    width: 16em;
+    width: 20em;
     left:auto;
+
 }
 
 .container3{
-    max-width: 56em;
+    max-width: 60em;
     display:flex;
     text-align: left;
+    margin:auto;
     
 }
 
 .container3-left{
-    width: 28em;
+    width: 30em;
 }
 .container3-right{
-    width: 28em;
-    left:auto;
+    width: 30em;
+    text-align: right;
 }
 
 
@@ -4158,7 +4184,7 @@ footer .arrow{display:block}
 		background-size: 50% 50% fixed;
 	}
 
-.large-containter{
+.large-container{
 /*
     background-attachment:auto;
     background-image:url(images/friedolin_GW_hover%20copy.png);
@@ -4180,37 +4206,13 @@ footer .arrow{display:block}
             text-align:center;
 		}
 
-        #intro table th{
-            color:#000;
-            letter-spacing:inherit;
-            margin:0 0 0 0;
-            padding: .5em 0em 0em 0em;
-        }
-        #intro table td{
-            color:#000;
-            text-align:left;
-            padding: .5em 0em 0em 0em;
-        }
+
 
 @media screen and (max-width: 980px) {
 
 				#intro p br {
 					display: none;
 				}
-    
-.container2{
-    max-width: 56em;
-    display:flex;
-    text-align: left;   
-}
-    
-.container2-left{
-    width: 40em;
-}
-.container2-right{
-    width: 16em;
-    left:auto;
-}
 
 			}
 
@@ -4222,18 +4224,7 @@ footer .arrow{display:block}
                 #intro article{
                     resize:both;
                 }
-.container2{
-    max-width: 56em;
-    display:flex;
-    text-align: left;   
-}
-    
-.container2-left{
-    width: 40em;
-}
-.container2-right{
-    width: 16em;
-}
+
 			}
 
 @media screen and (max-width: 1240px) {
@@ -4241,20 +4232,10 @@ footer .arrow{display:block}
 			#intro {
 				background-attachment: scroll;
 			}
-.container2{
-    max-width: 56em;
-    display:flex;
-    text-align: left;   
-}
-    
-.container2-left{
-    width: 40em;
-}
-.container2-right{
-    width: 16em;
-    left:auto;
-}
+
 		}
+
+
 
 /*one*/
 	#one,#two,#three,#four,#five {
@@ -4298,17 +4279,6 @@ footer .arrow{display:block}
             text-align:center;
 		}
 
-        #intro table th{
-            color:#000;
-            letter-spacing:inherit;
-            margin:0 0 0 0;
-            padding: .5em 0em 0em 0em;
-        }
-        #intro table td{
-            color:#000;
-            text-align:left;
-            padding: .5em 0em 0em 0em;
-        }
 
 			@media screen and (max-width: 980px) {
 
