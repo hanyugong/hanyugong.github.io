@@ -1121,7 +1121,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-image: url(../pictures/loader.gif);
-  background-size: 50%;
+  background-size: 15em;
   background-repeat: no-repeat;
   background-position: center;
 }
