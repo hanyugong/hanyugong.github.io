@@ -3238,13 +3238,13 @@ font-family: 'Crimson Text', serif;
             color: #000;
             text-align:left;
 			padding: 0em 0em 0em 2em;
-            font-size:0.8em;
+            font-size:1em;
             max-width: 8em;
 		}
 
 		table th {
 /*			color: #ffffff;*/
-			font-size: 0.8em;
+			font-size: 1em;
 			padding: 0 0em 0em 0em;
 			text-align: right;
             max-width: 10em;
@@ -4196,7 +4196,7 @@ footer .arrow{display:block}
     align-content: center;
 }
 		#intro p {
-			font-size: 15px;
+			font-size: 18px;
             color:#000;
             text-align:justify;
 /*            width:838px;*/
@@ -4219,7 +4219,7 @@ footer .arrow{display:block}
 @media screen and (max-width: 800px) {
 
 				#intro p {
-					font-size: 1em;
+					font-size: 1.1em;
 				}
                 #intro article{
                     resize:both;
@@ -4238,7 +4238,7 @@ footer .arrow{display:block}
 
 
 /*one*/
-	#one,#two,#three,#four,#five {
+	#one,#two,#three,#four,#five, #six {
 
         background-color:#fff;
 		background-position: center;
@@ -4247,29 +4247,35 @@ footer .arrow{display:block}
 	}
 
 		#one p {
-			font-size: 15px;
+			font-size: 18px;
             color:#000;
             text-align:justify;
 		}
 
 	#two p {
-			font-size: 15px;
+			font-size: 18px;
             color:#000;
             text-align:justify;
 		}
 
     #three p {
-			font-size: 15px;
+			font-size: 18px;
             color:#000;
             text-align:justify;
 		}
     #four p {
-			font-size: 15px;
+			font-size: 18px;
             color:#000;
             text-align:justify;
 		}
     #five p {
-			font-size: 15px;
+			font-size: 18px;
+            color:#000;
+            text-align:justify;
+		}
+
+ #six p {
+			font-size: 18px;
             color:#000;
             text-align:justify;
 		}

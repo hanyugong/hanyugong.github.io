@@ -3078,13 +3078,13 @@
 		table td {
             text-align:left;
 			padding: 0em  0em 0em 2em;
-            font-size:0.8em;
+            font-size:1em;
             max-width: 8em;
 		}
 
 		table th {
 /*			color: #ffffff;*/
-			font-size: 0.8em;
+			font-size: 1em;
 			font-weight: bold;
 			padding: 0 0em 0em 0em;
 			text-align: right;
@@ -4020,7 +4020,7 @@ footer .arrow{display:block}
     align-content: center;
 }
 		#intro p {
-			font-size: 15px;
+			font-size: 18px;
             color:#3FF3D4;
             text-align:justify;
 /*            width:838px;*/
@@ -4072,7 +4072,7 @@ footer .arrow{display:block}
 	}
 
 		#one p {
-			font-size: 15px;
+			font-size: 18px;
             color:#3FF3D4;
             text-align:justify;
 /*            width:838px;*/
@@ -4089,7 +4089,7 @@ footer .arrow{display:block}
 	}
 
 		#two p {
-			font-size: 15px;
+			font-size: 18px;
             color:#3FF3D4;
             text-align:justify;
 /*            width:838px;*/
@@ -4106,7 +4106,7 @@ footer .arrow{display:block}
 	}
 
 		#three p {
-			font-size: 15px;
+			font-size: 18px;
             color:#3FF3D4;
             text-align:justify;
 /*            width:838px;*/
@@ -4123,7 +4123,7 @@ footer .arrow{display:block}
 	}
 
 		#four p {
-			font-size: 15px;
+			font-size: 18px;
             color:#3FF3D4;
             text-align:justify;
 /*            width:838px;*/
@@ -4140,7 +4140,7 @@ footer .arrow{display:block}
 	}
 
 		#five p {
-			font-size: 15px;
+			font-size: 18px;
             color:#3FF3D4;
             text-align:justify;
 /*            width:838px;*/
