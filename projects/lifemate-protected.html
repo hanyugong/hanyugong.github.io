@@ -1,9 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-      
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
+<!DOCTYPE HTML>
+<html>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Hanyu Gong | Google Design Challenge</title>		
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Nanum+Myeongjo" rel="stylesheet">
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="./assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90118229-2"></script>
@@ -24,254 +22,440 @@
       gtag('js', new Date());
       gtag('config', 'UA-90118229-2');
     </script>
+
+<!--
+<script type="text/javascript">
+        loopy()
+        function loopy() {
+        var sWord =""
+        while (sWord != "hanyu0226") {
+        sWord = prompt("Please enter the password!")
+        }
+        alert("Hi! Google!")
+        }
+</script>
+-->
     
-    <style>
-        html, body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        #dialogText {
-            padding: 10px 30px;
-            color: white;
-            background-color: #000;
-        }
-        
-        #dialogWrap {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: table;
-            background-color: #ffffff;
-        }
-        
-        #dialogWrapCell {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
-        
-        #mainDialog {
-            max-width: 400px;
-            margin: 5px;
-            border: solid #ffffff 1px;
-            border-radius: 10px;
-            box-shadow: 3px 3px 15px 3px #e2e2e2;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #FFFFFF;
-            overflow: hidden;
-            text-align: left;
-        }
-        #passArea {
-            padding: 20px 30px;
-            background-color: white;
-        }
-        #passArea > * {
-            margin: 5px auto;
-        }
-        #pass {
-            width: 100%;
-            height: 40px;
-            font-size: 30px;
-            background-color: #eeeeee;
-        }
-        
-        #messageWrapper {
-            float: left;
-            vertical-align: middle;
-            line-height: 30px;
-        }
-        
-        .notifyText {
-            display: none;
-        }
-        
-        #invalidPass {
-            color: red;
-        }
-        
-        #success {
-            color: green;
-        }
-        
-        #submitPass {
-            font-size: 20px;
-            color: #fff;
-            border-radius: 5px;
-            background-color: #000;
-            float: right;
-        }
-        #contentFrame {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-  </head>
-  <body>
-    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
-    <div id="dialogWrap">
-        <div id="dialogWrapCell">
-            <div id="mainDialog">
-                <div id="dialogText">This page is password protected.</div>
-                <div id="passArea">
-                    <p id="passwordPrompt">Password</p>
-                    <input id="pass" type="password" name="pass">
-                    <div>
-                        <span id="messageWrapper">
-                            <span id="invalidPass" class="notifyText">Sorry, please try again.</span>
-                            <span id="success" class="notifyText">Success!</span>
-                            &nbsp;
-                        </span>
-                        <br>
-                        <button id="submitPass" type="button">Submit</button>
-                        <div style="clear: both;"></div>
+</head>
+	<body>
+        <!-- Preload -->
+		<div class="preload">
+			<div class="rubik-loader"></div>
+		</div>
+		<!-- Preload -->
+        <div class="outer">
+		<!-- Sidebar -->
+           <div class="back">
+                    <a href="../index.html">
+                        <img src="images/icon.svg" href="../index.html" width="40em"></a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
-    <script>
-        /*! srcdoc-polyfill - v0.1.1 - 2013-03-01
-        * http://github.com/jugglinmike/srcdoc-polyfill/
-        * Copyright (c) 2013 Mike Pennisi; Licensed MIT */
-        (function( window, document, undefined ) {
-	
-	        var idx, iframes;
-	        var _srcDoc = window.srcDoc;
-	        var isCompliant = !!("srcdoc" in document.createElement("iframe"));
-	        var implementations = {
-		        compliant: function( iframe, content ) {
-
-			        if (content) {
-				        iframe.setAttribute("srcdoc", content);
-			        }
-		        },
-		        legacy: function( iframe, content ) {
-
-			        var jsUrl;
-
-			        if (!iframe || !iframe.getAttribute) {
-				        return;
-			        }
-
-			        if (!content) {
-				        content = iframe.getAttribute("srcdoc");
-			        } else {
-				        iframe.setAttribute("srcdoc", content);
-			        }
-
-			        if (content) {
-				        // The value returned by a script-targeted URL will be used as
-				        // the iFrame's content. Create such a URL which returns the
-				        // iFrame element's `srcdoc` attribute.
-				        jsUrl = "javascript: window.frameElement.getAttribute('srcdoc');";
-
-				        iframe.setAttribute("src", jsUrl);
-
-				        // Explicitly set the iFrame's window.location for
-				        // compatability with IE9, which does not react to changes in
-				        // the `src` attribute when it is a `javascript:` URL, for
-				        // some reason
-				        if (iframe.contentWindow) {
-					        iframe.contentWindow.location = jsUrl;
-				        }
-			        }
-		        }
-	        };
-	        var srcDoc = window.srcDoc = {
-		        // Assume the best
-		        set: implementations.compliant,
-		        noConflict: function() {
-			        window.srcDoc = _srcDoc;
-			        return srcDoc;
-		        }
-	        };
-
-	        // If the browser supports srcdoc, no shimming is necessary
-	        if (isCompliant) {
-		        return;
-	        }
-
-	        srcDoc.set = implementations.legacy;
-
-	        // Automatically shim any iframes already present in the document
-	        iframes = document.getElementsByTagName("iframe");
-	        idx = iframes.length;
-
-	        while (idx--) {
-		        srcDoc.set( iframes[idx] );
-	        }
-
-        }( this, this.document ));
-    </script>
-    <script>
-        var pl = {"salt":"W4mIyUKjASoRf3QQeWLUVVbDon0QDBB/CToMn+TxI/s=","iv":"Lu/9hlSlzT0zYoSSqAfFnw==","data":"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"};
+			<div id="sidebar">
+             
         
-        var submitPass = document.getElementById('submitPass');
-        var passEl = document.getElementById('pass');
-        var invalidPassEl = document.getElementById('invalidPass');
-        var successEl = document.getElementById('success');
-        var contentFrame = document.getElementById('contentFrame');
-        
-        if (pl === "") {
-            submitPass.disabled = true;
-            passEl.disabled = true;
-            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
-        }
-        
-        function doSubmit(evt) {
-            try {
-                var decrypted = decryptFile(CryptoJS.enc.Base64.parse(pl.data), passEl.value, CryptoJS.enc.Base64.parse(pl.salt), CryptoJS.enc.Base64.parse(pl.iv));
-                if (decrypted === "") throw "No data returned";
+				<div class="inner">
+
+                        		
+<!--                         <a name="back" href="../index.html">-->
+                       
+<!--                             <img class="logo" src="images/icon.svg" href="../index.html">-->
+					
+                    <br>
+					<nav>
+						<ul>
+							<li><a name="nav" href="#intro">Overview</a></li>
+							<li><a name="nav" href="#one">Research</a></li>
+							<li><a name="nav" href="#two">Findings</a></li>
+							<li><a name="nav" href="#three">Design</a></li>
+                            <li><a name="nav" href="#four">Hi-Fi</a></li>
+                            <li><a name="nav" href="#five">Evaluation</a></li>
+                            <li><a name="nav" href="#six">Reflections</a></li>
+						</ul>
+					</nav>
+                    
+				</div>
+              
+			</div>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+                        
+						<div class="inner" >
+                     	
+                        <h1 style="color: #4FB3BF">LifeMate</h1><br>
+                         <article class="large-containter">
+                            <img src="./images/report/cover.png" width=100%>
+                            </article>
+                            
+                        <div class="container">
+                        <table>
+                            <tbody>
+                                <tr>
+                                <th style="color: #4FB3BF; ">Duration</th>
+                                 <td style="max-width: 10em;">Mar 2019, 5-day design challenge </td>
+                                        </tr>
+                                <tr>
+                                <th style="color: #4FB3BF; ">Key Words</th>
+                                 <td style="max-width: 10em;">Conversational Interfaces<br>Interaction Design<br>Visual Design<br>Research</td>
+                                        </tr>
+                                
+                             </tbody>
+                            </table>
+                            <br><br>
+                            <img src="./images/report/process.png" width=100%>
+                            <br><br><br><br><br><br>
+                            </div>
+                         <div class="container">
+                             <h3 style="font-size: 1.5em;">&#8226; A Small Story &#8226;</h3>
+                             <br>
+                             <p style="font-size: 1.1em;">  As a person who hasn't decided to settle down in one place, Charlie always signs yearly leasing contracts for apartments. He just moved into Rosemont, a community in the coveted Atlanta suburb. Apart from the great scene with a reasonable price, this community attracts him because the management team serves people super well. In the past, when he encountered amenity issues, he has experienced various kinds of <span style="font-weight: bold;background-color: #FFEDE7;"> “toing and froing” situations that exhausted both the leasing office and himself.</span>  </p>
+                             <br>
+                             <p> Now, he doesn't need to suffer from the inefficiencies any more! Rosemont management team has adopted a new product ———— <span style="font-weight: bold;background-color: #FFEDE7;">LifeMate</span> for every residents in the community. </p>
+                            
+                            </div>
+                              <br>  <br>
+                       <div class="container3">   
+                           <div class="container3-left">
+                             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    <img class="image" src="./images/report/onboarding.gif" width=60% style="box-shadow: 0px 5px 15px #D8D8D8;" ><br>
+                           </div>
+                           <div class="container3-right" > <h3 style="font-size: 1.2em; color: #4FB3BF; max-width: 20em; text-align: left">I. Painless onboarding experience</h3> <br> <p style="max-width: 30em;">On the day Charlie moves in, the leasing agent sent a LifeMate invitation link to his registered email. The link redirects him to joining the Rosemont community on Lifemate, and <span style="font-weight: bold;background-color: #FFEDE7;">he only needs to confirm the email address and apartment number.</span>  </div>
+                       </div>
+                        <br><br><br><br>
+                        <div class="container3">   
+                           &nbsp &nbsp   <div class="container3-right" > <h3 style="font-size: 1.2em; color: #4FB3BF; max-width: 30em;text-align: right">II. Smart and simple reporting process</h3> <br> <p style="max-width: 30em;"> With the chatbot, he can report issues and request maintenance without any effort. The AR mode is especially helpful when his parents come to visit him from China.</div>
+                            <div class="container3-left" style="padding-left: 5em;">
+                             <img class="image" src="./images/report/ARmode.gif" width=70% style="box-shadow: 0px 5px 15px #D8D8D8;" ><br>
+                           </div>
+                       </div>
+                        <br><br><br><br>
+                         <div class="container3">   
+                           <div class="container3-left">
+                             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    <img class="image" src="./images/report/assistant.gif" width=60% style="box-shadow: 0px 5px 15px #D8D8D8;" ><br>
+                           </div>
+                           <div class="container3-right" > <h3 style="font-size: 1.2em; color: #4FB3BF; max-width: 20em; text-align: left">III. Integrated with Google assistant</h3> <br> <p style="max-width: 30em;">Talk to Google assistant to report the issues. He doesn't even need to open the app! Also, it's multi-lingual now!</div>
+                       </div> 
+                         <br><br><br><br>
+                        <div class="container3">   
+                           &nbsp &nbsp   <div class="container3-right" > <h3 style="font-size: 1.2em; color: #4FB3BF; max-width: 30em;text-align: right">IV. Keep progress in control</h3> <br> <p style="max-width: 30em;"> With LifeMate, Charlie can track the progress of each request and take actions correspondingly.</div>
+                            <div class="container3-left" style="padding-left: 5em;">
+                             <img class="image" src="./images/report/track.gif" width=70% style="box-shadow: 0px 5px 15px #D8D8D8;" ><br>
+                           </div>
+                       </div>
+
+						</div>
+					</section>
+
+				<!-- One -->
+                    <section id="one" class="wrapper style2 spotlights">
+					<div class="inner" >
+                             <br> <br> 
+                        <h3 style="font-size: 1.5em;">&#8226; How I understood the problem &#8226;</h3><br>
+                        <h2 style="text-align: center"> / Define the scope / </h2>
+                        <br>
+                        <div class="container">
+                            <img class="image" src="./images/report/prompt.png" width=80% ><br><br>
+                            <img class="image" src="./images/report/scope.gif" width=100% ><br><br>
+                            <p>The process of maintenance requesting vary significantly from community to community.  I started to narrow down the scope by analyzing keywords in the prompt and listing its variations. Taking reachability into consideration, I decided to focus mainly on <span style="font-weight: bold;background-color: #FFEDE7;">young leasees in leasing communities</span>. Based on my previous knowledge and some assumptions, their characteristics are:</p>
+                            <p style="font-weight: bolder;border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;"> 
+                             Residents don't own the property and they turn to the leasing office for all community issues, either in public spaces or inside apartments. Also, in most cases, the service is free. </p>
+                            <p style="font-weight: bolder;border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;"> 
+                             Young people's working/studying hours are generally conflicting with the management's office hours. Walk-in request seems to be difficult. </p>
+                            <p style="font-weight: bolder;border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;"> 
+                             Digital system for documentation purpose is a necessity for the management team, because nobody is able to be 24-hour on call for all issues in such a big community.</p>
+                        
+                        </div>
+                        
+                        <br><br>
+                        <h2 style="text-align: center"> / Talk to people / </h2><br>
+                         <div class="container">
+                              <img class="image" src="./images/report/interview.png" width=100% ><br><br>
+                             <p>To quickly understand users' thoughts & deeds on existing solutions, I talked to 6 leasees with drafted interview questions. <span style="font-weight: bold;background-color: #FFEDE7;">I tried to balance the age, gender, nationality and experience in living in leased apartments.</span> Also, I approached 2 leasing agents for stakeholder interviews. I coded the interview notes and synthesized findings via affinity mapping. </p><br>
+                             <img class="image" src="./images/report/affinity.gif" width=100% >
+                        </div>
+                        
+                         <br><br><br>
+                        <h2 style="text-align: center"> / Look into existing solutions / </h2><br>
+                        <div class="container">
+                            <p>Understanding how people get amenities repaired right now gave me a better idea on their painpoints.
+                            </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                <span style="font-weight: bold">Face-to-face communications:</span> It only happens when people have time and the office is just nearby. Also, <span style="font-weight: bold;background-color: #FFEDE7;">extra steps still need to be taken for documentation purpose.</span> 
+                            </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                <span style="font-weight: bold">Phone calls: </span> Another way for direct conversations. It's the best for issues that need immediate actions. Otherwise people still have to wait. Both the leasing office and the community memeber will easily <span style="font-weight: bold;background-color: #FFEDE7;">lose track of the information.</span> 
+                            </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            <span style="font-weight: bold">Email: </span>Errr. seems like a lot of manual work.
+                            </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                <span style="font-weight: bold">Online portal: </span><span style="font-weight: bold;background-color: #FFEDE7;">You cannot expect residents to keep the website in mind.</span> Every time a person moves into a new community, she needs to learn new ways of reporting issues.
+                            </p>
+                            
+                        </div>
+                        
+          
+                     
+                    </div>
+                        
+					</section>
+
+				<!-- Two -->
+                <section id="two" class="wrapper style1 fullscreen fade-up">
+					<div class="inner" >
+                        <br><br>
+                        <div class="container">
+                        <br>
+                         <h3 style="font-size: 1.5em;">&#8226; What I found out &#8226;</h3><br>
+                        <h2 style="text-align: center"> / 3 Typical user stories / </h2>
+                        <br><br>
+                            <img class="image" src="./images/report/journey.png" width=100% >
+                        </div>
+                            
+                        
+                        <br><br><br>
+                        <div class="container">
+                            <h2 style="text-align: center"> / Who I'm designing for / </h2><br>
+                            <img class="image" src="./images/report/persona.png" width=60% >
+                        </div>
+                       
+                       <br><br><br>
+                        <div class="container">
+                            <h2 style="text-align: center"> / Identify key challenges / </h2><br>
+                            <p>To my surprise, the biggest difficulty users encounter is not how they suffer from inefficient feedback (Well, I made this assumption at the beginning), but <span style="font-weight: bold;background-color: #FFEDE7;">how they give up in the first place due to the inconvenience to initiate a request.</span></p><br>
+                            <img class="image" src="./images/report/implications.png" width=90% >
+                        </div>
+                  
+                        </div>
+                        
+					</section>
                 
-                // Set default iframe link targets to _top so all links break out of the iframe
-                decrypted = decrypted.replace("<head>", "<head><base href=\".\" target=\"_top\">");
-                
-                srcDoc.set(contentFrame, decrypted);
-                
-                successEl.style.display = "inline";
-                passEl.disabled = true;
-                submitPass.disabled = true;
-                setTimeout(function() {
-                    dialogWrap.style.display = "none";
-                }, 1000);
-            } catch (e) {
-                invalidPassEl.style.display = "inline";
-                passEl.value = "";
-            }
-        }
-        
-        submitPass.onclick = doSubmit;
-        passEl.onkeypress = function(e){
-            if (!e) e = window.event;
-            var keyCode = e.keyCode || e.which;
-            invalidPassEl.style.display = "none";
-            if (keyCode == '13'){
-              // Enter pressed
-              doSubmit();
-              return false;
-            }
-        }
-        
-        function decryptFile(contents, password, salt, iv) {
-            var _cp = CryptoJS.lib.CipherParams.create({
-                ciphertext: contents
-            });
-            var key = CryptoJS.PBKDF2(password, salt, { keySize: 256/32, iterations: 100 });
-            var decrypted = CryptoJS.AES.decrypt(_cp, key, {iv: iv});
+       <!-- Three -->
+                <section id="three" class="wrapper style2 spotlights">
+					<div class="inner" >
+                        <br><br><br>
+
+                         <h3 style="font-size: 1.5em;">&#8226; I started designing &#8226;</h3><br>
+                        
+                       <div class="container">
+                        <p>Something you may need to know before I move on to explainig my design process:</p>
+                        <p style="border-left-width: 0.3em; border-left-color:#ffccbc; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            With some initial research on how machine learning and, voice recognition and language analysis has advanced nowadays, I assumed I could get all the technical resources. So I go as boldly as possible.
+                            </p>
+                        <p style="border-left-width: 0.3em; border-left-color:#ffccbc; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            I assume my target users have smart phones.
+                            </p>
+                        <p style="border-left-width: 0.3em; border-left-color:#ffccbc; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            I assume the community management team has a corresponding internal system and they will check and make updates in time. So I only focus on the resident-end here.
+                            </p>
+                       </div>
+                        <br><br>
+                        
+                        <div class="container">
+                         <h2 style="text-align: center"> / Sketching out ideas / </h2><br>
+                            <br>
+                            <p>From previous research activities, I noticed <span style="font-weight: bold;background-color: #FFEDE7;">how "lazy" people could be</span> and how they regard <span style="font-weight: bold;background-color: #FFEDE7;">"direct conversations"</span> as a way to quickly get attention. </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                What if the system allows users to "make conversations" and type less ? <br>
+                                What if someone/something can help to address the issues clearly?<br>
+                            </p>
+                                <br>
+                            <img class="image" src="./images/report/idea.png" width=60% >
+                            <br>
+                            <p>With such questions in mind, I started brainstorming solutions. A smart digital agent became my core design direction. My first version of design was an AR-based chatbot that could help users to identify the issues. For users who're not on spot and cannot use the AR function, I proposed to use voice assistant like Google assistant to initiate the conversation. Then I returned to the users I interviewd beforehand for feedback </p><br>
+                            <img class="image" src="./images/report/sketch.png" width=100% >
+                            <img class="image" src="./images/report/concept_feedback.png" width=100% >
+
+                        </div>
+				        <br><br><br>         
+                        <div class="container">
+                         <h2 style="text-align: center"> / Refining concept / </h2><br>
+                        
+                            <img class="image" src="./images/report/userflow.png" width=100% ><br><br>
+                            <p>Good news! You only have to answer at most 4 questions (sometimes 3) in a few words, or maybe don't have to think about a single word but just "tap tap tap"! </p>
+                            <img class="image" src="./images/report/conversation.png" width=70% >
+                            <br><br>
+                            <p>After refining the user flow of the system, more importantly, designing the conversational flows, I then created a relatively comprehensive wireframe for user testing. I <span style="font-weight: bold;background-color: #FFEDE7;">intentionally chose two different types of issue as examples in the prototype</span>, so users can understand the major functionalities easily during the test.  </p><br><br>
+                            <img class="image" src="./images/report/wireframe.png" width=100% ><br><br>
+                            
+                            <img class="image" src="./images/report/lowfi_insight.png" width=100% >
+
+                        </div>
+                         
             
-            return decrypted.toString(CryptoJS.enc.Utf8);
-        }
-    </script>
-  </body>
+
+                        </div>
+                        <br><br><br><br>
+					</section>
+                
+<!-- Four -->
+                <section id="four" class="wrapper style2 spotlights">
+					<div class="inner" >
+                        <div class="container">
+                        <h3 style="font-size: 1.5em;">&#8226; FINAL PROPOSAL &#8226;</h3> <br>  
+                        <br> 
+                             <h3 style="font-size: 1em; color: #c2c2c2; text-align: center">- A -<br>CONVENIENT ACCESS TO THE SYSTEM </h3> 
+                             <h3 style="font-size: 1.5em; color: #4FB3BF; text-align: center">"Say goodbye to account & password!"</h3> <br>
+                             <p>How can users get access to the reporting system conveniently? Inspired by project management service like Asana and Slack, LifeMate is a platform for any leasing real-estate corporate to create their "online communities". Residents will get an email invitation to onboard the system. No registration work is needed because your profile has already been established by the management team!</p><br>
+                             <img class="image" src="./images/report/A.png" width=100% >
+                        </div><br>
+                        
+                        <div class="container">
+                        <br> 
+                             <h3 style="font-size: 1em; color: #c2c2c2; text-align: center">- B -<br>PAINLESS REPORTING EXPERIENCE </h3> 
+                             <h3 style="font-size: 1.5em; color: #4FB3BF; text-align: center">"Someone does the request for you!"</h3> <br>
+                            <p>Thanks to the development of machine learning, AR & language analysis in voice interactions, I was able to utilize these trending technology and designed the conversational interfaces for apartment management in the future. </p>
+                             <img class="image" src="./images/report/B.png" width=100% >
+                             
+                        </div><br>
+                        
+                        <div class="container">
+                        <br> 
+                             <h3 style="font-size: 1em; color: #c2c2c2; text-align: center">- C -<br>TRACK RESOLUTIONS </h3> 
+                             <h3 style="font-size: 1.5em; color: #4FB3BF; text-align: center">"Everything is in control!"</h3> <br>
+                            
+                             <img class="image" src="./images/report/C.png" width=100% >
+                             
+                        </div><br>
+                        
+                        
+                        
+                        
+                          <br><br>
+                        </div>
+                        
+					</section>
+                
+                
+<!-- Five -->
+                <section id="five" class="wrapper style2 spotlights">
+					<div class="inner" >
+                        <div class="container" >  
+                        <h3 style="font-size: 1.5em;">&#8226; EVALUATION &#8226;</h3> 
+                        <br> 
+                 
+                         <p>I wasn't able to conduct a thorough usability testing due to the time constraints, especially for the conversational interface. However, I did asked users to quickly test on my final design. The overall feedback was quite positive. 
+                         </p>
+                        <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            The voice interaction is especially convenient as long as it can recognize information accurately.
+                            </p>
+                        <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            They didn't understand why they need to select the visibility of public amenity maintenance requests at the beginning. But after they saw the content of such incident, they found it super helpful because they can know the progress of important issues like the gate maintenance. Also, once a person has submitted the request, other community members don't have to repetitive work. The leasing office also doesn't need to explain situations one by one.
+                            </p>
+                        <p>There were two small iterations I did after conducting the evaluation session:
+                         </p>
+                        <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            The instructions given at the beginning looks like asking users to send back their choices from A/B/C, but is was actually a hint that tells users three ways to start the conversation. So I rewrote the sentence.
+                            </p>
+                         <img class="image" src="./images/report/change1.png" width=100% >
+                        <br><br>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            Although users can understand what "+" button means, one said that she didn't expect to see a conversational interface afterwards. It was a little bit abrupt. Therefore, I tried to modify the icon and changed it into a small conversation bubble with an exclamation mark. It matches better to the "issue reporting" scenario.
+                            </p>
+                         
+                        <img class="image" src="./images/report/change2.png" width=100% >
+                       <br><br>
+                        <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                            More condensed interactions: In original design, using the AR mode to select an issue category and reporting detailed problem were two separate steps. It affects the coherency. See how I modified it: 
+                            </p>
+                         
+                        <img class="image" src="./images/report/change3.png" width=100% >
+                        </div>
+                         <br> <br> <br>
+                        </div>
+                        
+					</section>
+                
+<!-- Six -->
+                <section id="six" class="wrapper style2 spotlights">
+					<div class="inner" >
+                        <div class="container" >  
+                        <h3 style="font-size: 1.5em;">&#8226; REFLECTIONS &#8226;</h3> 
+                        <br>
+                 
+                         <p>
+                             I still remember when I approached the first user, he didn't think there was any big deal in issue reporting situations. "Why do you choose to solve such a boring problem? I don't think there's any better way than filling out an online form or directly making phone calls." He asked. To be honest, I felt discouraged at the moment, doubting myself if I could actually make something creative and useful in the end.  But I didn't give up. After I showed him my final crafts, he was convinced that a product like LifeMate would definitely make his life easier. <br><br>
+                             For designers, there's never a "boring" issue. It's important to dive deeply into the context and dig out insights. I really enjoyed doing this design challenge because:
+                            </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#ffccbc; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                I managed to <span style="font-weight: bold;background-color: #FFEDE7;">narrow down the scope quickly</span> and <span style="font-weight: bold;background-color: #FFEDE7;">pushed myself to move forward</span>. 
+                            </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#ffccbc; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                I <span style="font-weight: bold;background-color: #FFEDE7;">pulled myself out of the comfort zone</span> and took on the actual "design challenge" I've never faced before: To design a <span style="font-weight: bold;background-color: #FFEDE7;">conversational interface</span>.   
+                            </p>
+                            <p>Of course, due to the time and resource constraints, my final deliverables are still far away from "final" if it is a real product. Future steps:</p>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                It was a pity that I didn't have enough time to make an interactive prototype for the conversations. I only used pre-defined sentences and phrases to showcase the concept. If I have time, I would really love to see <span style="font-weight: bold;background-color: #FFEDE7;">how users will speak to the system in the their language habits.</span>
+                            </p>
+                             <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                 I mainly focused on the resident-end this time. However, I know <span style="font-weight: bold;background-color: #FFEDE7;">a good service can never take place without the support of service providers/stakeholders.</span> In my scope, that should be the leasing office. I would like to show the design to the maintenance team to see if the information involved is enough. Also, I am passionate about creating the corresponding back-end platform for the management team. 
+                            </p>
+                            <p style="border-left-width: 0.3em; border-left-color:#4FB3BF; border-left-style: solid;display: block; margin-block-start: 1em; margin-block-end:1em; padding-left: 1em;">
+                                In the future, I hope I can look into how this system can be adapted for <span style="font-weight: bold;background-color: #FFEDE7;">people with disabilities.</span> 
+                            </p>
+                        <br>
+                        </div>
+                        </div>
+                        
+					</section>
+      
+        <section id="more" class="wrapper style2 spotlights">
+            <div class="inner">
+               <h3>&#8226; &#8226; &#8226; Explore more projects &#8226; &#8226; &#8226; </h3><br>
+            <div style="float:left;">
+                <a href="./starbucks.html">
+                   <div class="navigation" style="float:left;">
+                             <span class="shift" >
+                                &laquo;</span>
+                            <div class="mask"></div>
+                        </div><br><br><h3 style="font-weight: bold; font-size: .8em; text-align: center">STARBUCKS</h3> </a>
+                    </div>
+                
+                  
+            <div style="float:right;">
+                 <a href="./venmo.html">  
+                   <div class="navigation" style="float:right;"  >   
+                             <span class="shift" >
+                                &raquo;</span>
+                            <div class="mask"></div>
+                        </div><br><br><h3 style="font-weight: bold; font-size: .8em; text-align: center">INTERCEPT</h3> </a>
+                    </div>
+                <br><br>
+               
+                </div>
+                </section>
+                
+                <div class="back-to-top">
+                    <a href="#intro">
+                    <button class="arrow">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 36">
+                        <title>Top</title><path d="M11 6.3l-5-5-5 5m5-4.9v34"></path></svg>
+				    </button></a>
+                </div>
+			</div>
+        
+        
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt" >
+                
+				<div class="inner">
+                      <h2 style="padding:0em 0em 0em 0em; text-align: center; font-size: 12px">Designed and Coded by Hanyu Gong @ Atlanta, 2018</h2>
+				</div>
+			</footer>
+            </div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+            <script src="assets/js/psw.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
 </html>
