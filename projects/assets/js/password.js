@@ -14,9 +14,9 @@ var actions = {
 
   validatePassword: function validatePassword(ctx) {
     setTimeout(function () {
-      if (ctx.password === "hanyu") {
+      if (ctx.password === "hanyu0226") {
 //        send("VALID");
-          window.location.href='challenge.html';
+          window.location.href='lifemate-protected.html';
       } else {
         send("INVALID");
       }
